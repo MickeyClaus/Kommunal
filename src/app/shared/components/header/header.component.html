@@ -1,0 +1,34 @@
+<section id="header" *ngIf="!isLogin()">
+  <div class="container flex-sb-c">
+    <div class="flex-sb-c">
+      <div class="logo flex-sb-c">
+        <div class="logo-img">
+          <img src="../../../../assets/images/logo.jpg" alt="">
+        </div>
+        <div class="logo-title ml-2">
+          <p>Shemkir</p>
+          <p>kommunal</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex-fe-c">
+      <div class="acc-info">
+        <mat-icon [routerLink]="'/login'">account_circle</mat-icon>
+        <!-- <h6 class="name">{{ userFullName }}</h6> -->
+        <!-- <mat-icon class="cursor-pointer" (click)="logout()">arrow_right_alt</mat-icon> -->
+      </div>
+      <div class="user-title ml-2">
+        <p>Elnur Shahhuseynov</p>
+        <p>Administrator</p>
+      </div>
+      <div class="acc-info">
+        <mat-icon (click)="logOut()"><mat-icon>exit_to_app</mat-icon>
+      </mat-icon>
+        <!-- <h6 class="name">{{ userFullName }}</h6> -->
+        <!-- <mat-icon class="cursor-pointer" (click)="logout()">arrow_right_alt</mat-icon> -->
+      </div>
+    </div>
+  </div>
+
+</section>

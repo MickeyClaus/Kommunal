@@ -1,0 +1,7 @@
+<app-header *ngIf="!isLogin"></app-header>
+<ng-toast></ng-toast>
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)" *ngIf="!isLogin"></app-sidenav>
+<app-body [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth" *ngIf="!isLogin"></app-body>
+<div *ngIf="isLogin">
+    <router-outlet></router-outlet>
+</div>

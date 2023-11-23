@@ -1,0 +1,33 @@
+<div class="subtitle mt-1 mb-3">
+    <h4 *ngIf="data.report">{{data.report.reporT_FILE_TYPE_NAME}}</h4>
+    <h4 *ngIf="!data.report">Yeni Məhsul Şəxs yarat</h4>
+</div>
+    <div class="col mr-4">
+        <div class="form-group mt-2">
+            <label>Məhsul Şəxsin adı:</label>
+            <input class="default--input"  [(ngModel)]="name"  type="text" />
+        </div>
+        <div class="form-group mt-2">
+            <label>Məhsul Şəxsin kodu:</label>
+            <input class="default--input"  [(ngModel)]="code"  type="text" />
+        </div>
+        <div class="form-group mt-2">
+            <label>Tipi:</label>
+            <mat-select class="default--input" [(ngModel)]="type">
+                <mat-option value="1">
+                    Fiziki Şəxs
+                </mat-option>
+                <mat-option value="2">
+                    Hüquqi Şəxs
+                </mat-option>
+            </mat-select>
+        </div>
+    </div>
+<div class="btn-box mt-3 flex-fe-c">
+    <button class="filled-btn mr-2 p-1 flex-c-c" (click)="onSubmit()">
+        <mat-icon class="btn-icon mr-2">done</mat-icon>
+        <span>Yadda saxla</span>
+    </button>
+</div>
+
+<mat-icon class="popup-close" (click)="closeDialog()">close</mat-icon>

@@ -1,0 +1,36 @@
+<!-- <app-loader></app-loader> -->
+
+<section id="singIn">
+    <div class="flex">
+        <div class="logo flex-c">
+            <div class="image">
+                <div class="flex-sb-c">
+                    <img src="../../../assets/images/logo.jpg" alt="" class="w-75" />
+                    <div class="title">
+                        <p>Shemkir</p>
+                        <p>Kommunal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loginBox flex-c">
+            <div class="login">
+                <!-- <form action="onSubmit()"> -->
+                <h1 class="heading">Giris</h1>
+                <div class="userName">
+                    <input type="text" placeholder="Istifadechi adi" name="email" [(ngModel)]="name" required />
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Parol" [(ngModel)]="password" name="password" />
+                </div>
+                <!-- <button class="submit submit_for_forgot">
+                        Daxil Ol
+                    </button> -->
+                <!-- </form> -->
+                <button class="submit submit_for_forgot" (click)="onLogin()">
+                    Daxil Ol
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

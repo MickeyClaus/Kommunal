@@ -1,0 +1,134 @@
+// Grid system
+@import url("assets/styles/flex-grid.scss");
+// Default elements
+@import url("assets/styles/default.scss");
+// Helper classes
+@import url("assets/styles/atomic.scss");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: #fff;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+
+    .card-head {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #edf1f7;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .card-body {
+        padding: 1rem 1.5rem;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f8f8;
+    font-family: 'Comfortaa', cursive;
+}
+
+.page-header {
+    padding: 0 8px;
+    height: 34px !important;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    button {
+        height: 26px;
+        width: 80px;
+        background: #009688;
+        border-radius: 2px;
+        border: none;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.main-table {
+    background: white;
+}
+
+
+// SCROLL STYLE
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d5d5d5;
+    border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #979797;
+    border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.subtitle {
+    color: #1c3651;
+    font-weight: bold;
+}
+
+.mdc-dialog__container {
+    position: relative;
+
+    .popup-close {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        cursor: pointer !important;
+    }
+}
+
+.mdc-dialog__surface {
+    padding: 25px;
+}
+
+
+.filled-btn {
+    cursor: pointer;
+    background: #1c3651;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.dt {
+    border: none;
+    pointer-events: none;
+}

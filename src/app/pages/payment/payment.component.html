@@ -1,0 +1,79 @@
+
+<div class="container">
+    <div class="page-header flex-sb-c">
+        <p class="felx-c-c">Ödənişlər</p>
+        <div class="btn-box flex-fe-c">
+            <button style="background-color: #1c3651;" class="filled-btn mr-2 p-1 flex-c-c"
+                matTooltip="Yeni Məhsul Şəxs yarat">
+                <mat-icon class="btn-icon" (click)="openPopup(0)">add</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-5">
+            <div class="mat-elevation-z8 main-table">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 main-table">
+
+                    <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="subscriber">
+                        <th mat-header-cell *matHeaderCellDef>Məhsul Şəxsin Adı </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="contract">
+                        <th mat-header-cell *matHeaderCellDef> Müqavilə </th>
+                        <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="date">
+                        <th mat-header-cell *matHeaderCellDef> Tarix </th>
+
+                        <td mat-cell *matCellDef="let element"> <span *ngIf="element.type == 1">Fiziki Şəxs</span> <span
+                                *ngIf="element.type == 2">Hüquqi Şəxs</span></td>
+
+                    </ng-container>
+                    <ng-container matColumnDef="cost">
+                        <th mat-header-cell *matHeaderCellDef> Qiymət </th>
+
+                        <td mat-cell *matCellDef="let element"> <span *ngIf="element.type == 1">Fiziki Şəxs</span> <span
+                                *ngIf="element.type == 2">Hüquqi Şəxs</span></td>
+
+                    </ng-container>
+                    <ng-container matColumnDef="edit">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <mat-icon class="pointer" (click)="openPopup(element.id)">edit</mat-icon>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <mat-icon class="pointer" (click)="deletePayment(element.id)">delete</mat-icon>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="noData">
+                        <td mat-footer-cell *matFooterCellDef [attr.colspan]="displayedColumns.length"
+                            class="text-center">
+                            Məlumat tapılmadı
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="['noData']" [hidden]="dataSource"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
