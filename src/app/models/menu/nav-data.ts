@@ -7,7 +7,7 @@ export const navbarData = [
   {
       routeLink: 'individuals',
       icon: 'fal fa-box-open',
-      label: 'Məhsul Şəxslər'
+      label: 'Məsul Şəxslər'
   },
   {
       routeLink: 'payment',
@@ -15,7 +15,7 @@ export const navbarData = [
       label: 'Odənişlər'
   },
   {
-      routeLink: 'coupens',
+      routeLink: 'depts',
       icon: 'fal fa-tags',
       label: 'Borclar'
   },

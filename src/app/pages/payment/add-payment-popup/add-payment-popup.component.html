@@ -1,1 +1,43 @@
-<p>add-payment-popup works!</p>
+<div class="subtitle mt-1 mb-3">
+    <h4 *ngIf="data.report">{{data.report.reporT_FILE_TYPE_NAME}}</h4>
+    <h4 *ngIf="!data.report">Yeni ödəniş yarat</h4>
+</div>
+    <div class="col mr-4">
+        <div class="form-group mt-2">
+            <label>Məsul Şəxsin adı:</label>
+            <mat-select [(ngModel)]="subscriberId" class="default--input">
+                <mat-option *ngFor="let ddl of subscriberDDL" [value]="ddl.id">
+                    {{ ddl.name }}
+                </mat-option>
+            </mat-select>
+        </div>
+        <div class="form-group mt-2">
+            <label>Müqavilə:</label>
+            <mat-select [(ngModel)]="contractId" class="default--input">
+                <mat-option *ngFor="let ddl of contractsDDL" [value]="ddl.id">
+                    {{ ddl.name }}
+                </mat-option>
+            </mat-select>
+        </div>
+        <div class="form-group mt-2">
+            <label>Tarix:</label>
+            <div class="default--input flex-sb-c">
+                <input class="dt disabled-input" [matDatepicker]="datepickerA" type="text" [(ngModel)]="startDate" />
+                <mat-datepicker-toggle matSuffix class="cal-button datepicker" [for]="datepickerA">
+                </mat-datepicker-toggle>
+            </div>
+            <mat-datepicker #datepickerA></mat-datepicker>
+        </div>
+        <div class="form-group mt-2">
+            <label>Qiymət:</label>
+            <input class="default--input"  [(ngModel)]="amount"  type="text" />
+        </div>
+    </div>
+<div class="btn-box mt-3 flex-fe-c">
+    <button class="filled-btn mr-2 p-1 flex-c-c" (click)="onSubmit()">
+        <mat-icon class="btn-icon mr-2">done</mat-icon>
+        <span>Yadda saxla</span>
+    </button>
+</div>
+
+<mat-icon class="popup-close" (click)="closeDialog()">close</mat-icon>

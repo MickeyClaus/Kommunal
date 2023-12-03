@@ -51,7 +51,7 @@ export class IndividualsComponent implements OnInit {
     this.backendService.subscriberDelete(id).subscribe((res: any) => {
       this.toast.success({
         detail: '',
-        summary: 'Məhsul Şəxs uğurla silindi',
+        summary: 'Məsul Şəxs uğurla silindi',
         duration: 5000,
       });
       this.getContracts();

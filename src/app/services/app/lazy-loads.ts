@@ -10,3 +10,5 @@ export const home = () =>
   export const payment = () =>
   import('../../pages/payment/modules/payment.module').then((m) => m.PaymentModule);
 
+  export const depts = () =>
+  import('../../pages/depts/modules/depts.module').then((m) => m.DeptsModule);

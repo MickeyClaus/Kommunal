@@ -45,12 +45,9 @@ import { LoaderComponent } from './shared/components/loader/loader.component';
       multi: true
     },
     AuthGuardService,
-    // HomeApiService,
     LoaderService,
-    // NotificationService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ServerErrorInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true },
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
 
   ],

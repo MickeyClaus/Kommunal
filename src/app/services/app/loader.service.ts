@@ -6,13 +6,23 @@ import { Subject, BehaviorSubject } from 'rxjs';
 })
 export class LoaderService {
 
-  isLoading = new BehaviorSubject<boolean>(false);
-  show(): void {
-    this.isLoading.next(true);
-  }
-  hide(): void {
-    this.isLoading.next(false);
-  }
+  private apiCount = 0;
+  private isLoadingSubject = new BehaviorSubject<boolean>(false);
+  isLoading$ = this.isLoadingSubject.asObservable();
 
   constructor() { }
+
+  showLoader() {
+    if (this.apiCount === 0) {
+      this.isLoadingSubject.next(true);
+    }
+    this.apiCount++;
+  }
+
+  hideLoader() {
+    this.apiCount--;
+    if (this.apiCount === 0) {
+      this.isLoadingSubject.next(false);
+    }
+  }
 }

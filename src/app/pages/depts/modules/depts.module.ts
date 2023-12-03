@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { DeptsRoutingModule } from './depts-routing.module';
 import { DeptsComponent } from '../depts.component';
+import { MaterialModule } from 'src/app/shared/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { DeptsComponent } from '../depts.component';
   ],
   imports: [
     CommonModule,
-    DeptsRoutingModule
+    DeptsRoutingModule,
+    MatDialogModule,
+    SharedModule,
+    MaterialModule
   ]
 })
 export class DeptsModule { }

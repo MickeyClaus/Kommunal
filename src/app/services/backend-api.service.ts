@@ -92,7 +92,7 @@ export class BackendApiSevice {
     }
 
     paymentGetById(id: number): Observable<any> {
-        return this.http.get(`${this.apiURL}Payment/GetById`);
+        return this.http.get(`${this.apiURL}Payment/GetById?id=${id}`);
     }
 
     paymentUpdate(params: any): Observable<any> {
@@ -100,11 +100,11 @@ export class BackendApiSevice {
     }
 
     paymentAdd(params: any): Observable<any> {
-        return this.http.post(`${this.apiURL}Payment/Add`, params);
+        return this.http.post(`${this.apiURL}Payment/Create`, params);
     }
 
-    paymentDelete(params: any): Observable<any> {
-        return this.http.delete(`${this.apiURL}Payment/Delete`, params);
+    paymentDelete(id: number): Observable<any> {
+        return this.http.delete(`${this.apiURL}Payment/Delete?id=${id}`);
     }
 
     // REGION
