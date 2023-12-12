@@ -9,6 +9,42 @@
             </button>
         </div>
     </div>
+    <div class="filter-box  p-3 mt-3 flex-sb-c">
+        <div class="forms flex-fs-c">
+            <div class="form-group mr-4 w-12">
+                <label>Adı</label>
+                <input [(ngModel)]="amount" class="default--input" type="text"
+                    placeholder="Adını daxil edin" />
+            </div>
+
+            <div class="form-group mr-4 w-12">
+                <label>Müqavilə</label>
+                <input [(ngModel)]="amount" class="default--input" type="text"
+                    placeholder="Adını daxil edin" />
+            </div>
+            <div class="form-group mr-4 w-12">
+                <label>Tarix</label>
+                <input [(ngModel)]="amount" class="default--input" type="text"
+                    placeholder="Adını daxil edin" />
+            </div>
+            <div class="form-group mr-4 w-12">
+                <label>Qiymət</label>
+                <input [(ngModel)]="amount" class="default--input" type="text"
+                    placeholder="Adını daxil edin" />
+            </div>
+         
+
+
+            <div class="filter-button pointer mt-3 flex-sb-c">
+                <mat-icon matTooltip="Axtarış et" >search</mat-icon>
+                <div matTooltip="Filtri yenilə">
+                    <img src="./../../../../../assets/icons/refresh.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <div class="row">
         <div class="col-12 mt-5">
             <div class="mat-elevation-z8 main-table">

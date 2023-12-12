@@ -9,8 +9,8 @@ export class BackendApiSevice {
 
     // apiURL = environment.mainApiUrl;
 
-    apiURL = 'https://localhost:7131/api/';
-    // apiURL = 'https://elnurh.bsite.net/api/';
+    // apiURL = 'https://localhost:7131/api/';
+    apiURL = 'http://api-communal.somee.com/api/';
 
 
     constructor(private http: HttpClient) { }

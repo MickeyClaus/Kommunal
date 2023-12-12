@@ -112,7 +112,7 @@ export class AddContractsPopupComponent {
       contractClauseId: +this.conClauseId
     }).subscribe((res: any) => {
       this.dialog.closeAll();
-      this.toast.success({detail:"UĞUR",summary:'Konstruktor uğurla əlavə olundu !',duration:5000});
+      this.toast.success({detail:"UĞUR",summary:'Müqavilə uğurla yenilındi !',duration:5000});
 
     }, error => {
     });

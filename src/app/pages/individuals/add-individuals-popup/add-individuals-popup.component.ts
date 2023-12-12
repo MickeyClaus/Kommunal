@@ -71,7 +71,7 @@ export class AddIndividualsPopupComponent implements OnInit {
       type: +this.type
     }).subscribe((res: any) => {
       this.dialog.closeAll();
-      this.toast.success({detail:"UĞUR",summary:'Məsul Şəxs uğurla əlavə olundu !',duration:5000});
+      this.toast.success({detail:"UĞUR",summary:'Məsul Şəxs uğurla yeniləndi !',duration:5000});
 
     }, error => {
     });

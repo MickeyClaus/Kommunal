@@ -20,6 +20,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./contracts.component.scss']
 })
 export class ContractsComponent implements OnInit {
+
+  public contractName = '';
+  public startDate: any;
+  public endDate:any;
+  public serviceDDL: any[] = [];
+  public serviceId = '-1';
+  public subscriberDDL: any[] = [];
+  public subscriberId = '-1';
+  public conClauseDDL: any[] = [];
+  public conClauseId = '-1';
+  
   displayedColumns: string[] = ['position', 'name', 'startDate', 'endDate', 'curator', 'sub', 'servis', 'contract', 'edit', 'delete'];
   dataSource = ELEMENT_DATA;
 
@@ -52,7 +63,7 @@ export class ContractsComponent implements OnInit {
   deleteContract(id: number) {
     this.backendService.contractDelete(id).subscribe((res: any) => {
       this.toast.success({
-        detail: '',
+        detail:"UĞUR",
         summary: 'Müqavilə uğurla silindi',
         duration: 5000,
       });

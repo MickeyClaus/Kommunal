@@ -76,7 +76,7 @@ export class AddPaymentPopupComponent {
 
     }).subscribe((res: any) => {
       this.dialog.closeAll();
-      this.toast.success({ detail: "UĞUR", summary: 'Məsul Şəxs uğurla əlavə olundu !', duration: 5000 });
+      this.toast.success({ detail: "UĞUR", summary: 'Ödəniş uğurla əlavə olundu !', duration: 5000 });
 
     }, error => {
     });
@@ -91,7 +91,7 @@ export class AddPaymentPopupComponent {
       amount: +this.amount
     }).subscribe((res: any) => {
       this.dialog.closeAll();
-      this.toast.success({ detail: "UĞUR", summary: 'Məsul Şəxs uğurla əlavə olundu !', duration: 5000 });
+      this.toast.success({ detail: "UĞUR", summary: 'Ödəniş uğurla yeniləndi !', duration: 5000 });
 
     }, error => {
     });

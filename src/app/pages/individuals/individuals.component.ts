@@ -19,6 +19,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./individuals.component.scss']
 })
 export class IndividualsComponent implements OnInit {
+  public name = '';
+  public code = '';
+  public type = 0;
   displayedColumns: string[] = ['position', 'name', 'code', 'type', 'edit', 'delete'];
   dataSource = ELEMENT_DATA;
 
@@ -50,7 +53,7 @@ export class IndividualsComponent implements OnInit {
   deleteIndiv(id: number) {
     this.backendService.subscriberDelete(id).subscribe((res: any) => {
       this.toast.success({
-        detail: '',
+        detail:"UĞUR",
         summary: 'Məsul Şəxs uğurla silindi',
         duration: 5000,
       });

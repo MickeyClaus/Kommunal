@@ -19,6 +19,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
+  public subscriberDDL: any[] = [];
+  public subscriberId = '-1';
+  public contractsDDL: any[] = [];
+  public contractId = '-1';
+  public startDate: any;
+  public amount = 0;
+
   displayedColumns: string[] = ['position', 'subscriber', 'contract', 'date','cost', 'edit', 'delete'];
   dataSource = ELEMENT_DATA;
 
@@ -50,7 +57,7 @@ export class PaymentComponent {
   deletePayment(id: number) {
     this.backendService.paymentDelete(id).subscribe((res: any) => {
       this.toast.success({
-        detail: '',
+        detail: 'UĞUR',
         summary: 'Ödəniş uğurla silindi',
         duration: 5000,
       });
